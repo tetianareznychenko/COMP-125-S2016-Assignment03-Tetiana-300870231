@@ -1,0 +1,23 @@
+{
+    "images": [
+    {
+        "url1": "<center> <img src='Assets/1.JPG' alt='me' class='img-thumbnail'/></center>"
+    },
+    {
+        "url2_1": "<img src='Assets/d.jpg' alt='detective' class='img-circle' width='200px' height='200px'/>",
+        "url2_2":"<img src='Assets/pc8.jpg' alt='pc' class='img-circle' width='200px' height='200px'/>",
+        "url2_3":"<img src='Assets/i.jpg' alt='invest' class='img-circle' width='200px' height='200px'/>"
+    },
+    {
+        "url3_1": "<a href='https://www.facebook.com/tasha.elke' target='_blank'><img src='Assets/f.jpg' alt='facebook' width='100px' height='100px' class='img-rounded'></a> ",
+        "url3_2":"<a href='https://vk.com/id14854693' target='_blank'><img src='Assets/vk.png' alt='vk' width='95px' height='95px'class='img-rounded'></a>",
+        "url3_3":" <a href='https://ficbook.net/authors/18785' target='_blank'><img src='Assets/fb.jpg' alt='fickbook' width='100px' height='100px'class='img-rounded'></a> "
+    }
+]
+}
+
+
+
+ 
+   
+   
