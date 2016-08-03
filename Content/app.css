@@ -1,0 +1,27 @@
+/* custom css goes here */
+.navbar {
+
+    background-color: #330066;
+    background-image:  linear-gradient(#0c001a, #c999ff);
+}
+   
+
+h1{
+	text-shadow:0.5px 0.5px 0.5px;
+    text-align:center; 
+    color:#0c001a;
+}
+
+body{
+	 background:  #ffffff; 
+	 color: #0d0d0d; 	
+	 font-weight:bold;
+     font-size:16px; 
+     margin-left: auto;
+     margin-right: auto;
+}
+.photo{
+    float:left;
+    margin: 4px 10px 2px 0px;
+}
+
