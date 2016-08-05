@@ -2,45 +2,45 @@
 // IIFE - Immediately Invoked Function Expression
 
 //Tetiana Reznychenko, 300870231, Mini portfolio.
-    
+//Date: August 08, 2016 
+//Description: JavaScript code to read
+//paragraph data from a JSON file using AJAX and populate your page with this data 
+
 (function () {
     "use strict";
 
     var xhrParagraphs;
-    // we can use a named function instead of an anonymous function
+
+//This is for reading the data and append data to ID. 
+
     function readData() {
         // data loaded                everything is ok
         if ((xhrParagraphs.readyState === 4) && (xhrParagraphs.status === 200)) {
 
-            var paragraphs = JSON.parse(xhrParagraphs.responseText);
-            var paragraphsForPages = paragraphs.paragraphsForPages;
+            var text = JSON.parse(xhrParagraphs.responseText);
+            var paragraphs = text.paragraphs;
 
-            paragraphsForPages.forEach(function (paragraphsForPages) {
-            document.getElementById("paragraphOne").appendChild(paragraphsForPages);
-            document.getElementById("paragraphTwo").appendChild(paragraphProjectPage);
-            document.getElementById("paragraphThree").appendChild(paragraphContact);    
-            },);
+            paragraphs.forEach(function (paragraph) {
+            var paragraphOne = document.getElementById("paragraphOne").innerHTML.appendChild(paragraphs[0]);
+            var paragraphTwo = document.getElementById("paragraphTwo").innerHTML.appendChild(paragraphs[1]);
+            var paragraphThree = document.getElementById("paragraphThree").innerHTML.appendChild(paragraphs[2]);
+            });
 
         }
     }
-
-
-    function readParagraphs() {
+   function readParagraphs() {
         xhrParagraphs = new XMLHttpRequest(); // step 1 - create xhr object
         xhrParagraphs.open("GET", "Scripts/paragraphs.json", true); // step 2 - open request
         xhrParagraphs.send(null); // step 3 - send request
         xhrParagraphs.addEventListener("readystatechange", readData); // step 4
     }
 
+    // app entry function
     function init() {
-
-        
-        readData();
+        readParagraphs();
     }
+
     // call init funciton when window finishes loading
     window.addEventListener("load", init);
-
-
-   
-   
+  
 })();
