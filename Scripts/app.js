@@ -19,13 +19,20 @@
 
             var text = JSON.parse(xhrParagraphs.responseText);
             var paragraphs = text.paragraphs;
-
-            paragraphs.forEach(function (paragraph) {
-            var paragraphOne = document.getElementById("paragraphOne").innerHTML.appendChild(paragraphs[0]);
-            var paragraphTwo = document.getElementById("paragraphTwo").innerHTML.appendChild(paragraphs[1]);
-            var paragraphThree = document.getElementById("paragraphThree").innerHTML.appendChild(paragraphs[2]);
-            });
-
+            
+            // define paragraphs array;
+            var content = [];
+            
+            // data for pages
+            content[0] = text.paragraphs.document.getElementById("intro").innerHTML;
+            content[1] = text.paragraphs.document.getElementById("projects").innerHTML;
+            content[2] = text.paragraphs.document.getElementById("contacts").innerHTML;
+             // check to see if paragraph one exists
+    for (var index = 0; index < content.length; index++) {
+        if(content[index]) {
+         content[index].textContent = paragraphs[index];
+        }
+    }
         }
     }
    function readParagraphs() {
